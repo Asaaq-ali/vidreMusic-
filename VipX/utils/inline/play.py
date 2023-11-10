@@ -348,3 +348,22 @@ def panel_markup_3(_, videoid, chat_id):
         ],
     ]
     return buttons
+#asaaq
+
+close_keyboard = InlineKeyboardMarkup( 
+
+            [
+
+                [
+
+                    InlineKeyboardButton(
+
+                        text="✯ اغلاق ✯", callback_data="close"
+
+                    )
+
+                ]    
+
+            ]
+
+        )
