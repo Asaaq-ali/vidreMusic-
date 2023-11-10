@@ -367,3 +367,43 @@ close_keyboard = InlineKeyboardMarkup(
             ]
 
         )
+
+
+def queue_markup(_, videoid, chat_id):
+
+    buttons = [
+
+        [
+            
+            InlineKeyboardButton(
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["PL_X_2"],
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text=_["PL_X_3"],
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["PL_X_5"], switch_inline_query_current_chat=""
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["CLOSEMENU_BUTTON"], callback_data="close"
+            )
+        ],
+         [
+            InlineKeyboardButton(
+                text=_["PL_X_4"], url=f"https://t.me/Mlze1bot"
+            )
+        ],
+    ]
+    return buttons
