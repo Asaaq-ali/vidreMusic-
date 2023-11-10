@@ -40,7 +40,7 @@ from VipX.utils.thumbnails import gen_thumb
 
 autoend = {}
 counter = {}
-
+AUTO_END_TIME = 3
 
 async def _clear_(chat_id):
     db[chat_id] = []
